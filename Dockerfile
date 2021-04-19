@@ -1,7 +1,7 @@
 FROM python:3.9.4-buster
 
 WORKDIR /usr/src/app
-COPY requirements.txt main.py ./
+COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8080
