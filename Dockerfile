@@ -1,4 +1,4 @@
-FROM python:3.9.4-alpine
+FROM python:3.9.4-slim-buster
 
 WORKDIR /usr/src/app
 COPY requirements.txt main.py ./
