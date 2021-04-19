@@ -2,7 +2,6 @@ from __version__ import VERSION
 
 from fastapi import FastAPI
 
-# VERSION = "0.1.0"
 
 app = FastAPI()
 
@@ -15,3 +14,8 @@ async def root():
 @app.get("/version")
 async def version():
     return {"version": VERSION}
+
+
+@app.on_event("startup")
+async def startup_event():
+    print(f"Running version {VERSION}")
