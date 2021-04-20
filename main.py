@@ -18,4 +18,4 @@ async def version():
 
 @app.on_event("startup")
 async def startup_event():
-    print(f"Running version {VERSION}")
+    print(f">>> Running version {VERSION} <<<")
